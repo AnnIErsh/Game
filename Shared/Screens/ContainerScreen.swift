@@ -11,8 +11,7 @@ import Navigation
 struct ContainerScreen: View {
     @Binding var selected: Mode
     @ObservedObject var type = TypeViewModel()
-    @EnvironmentObject var route: NavigationViewModel
-    
+
     var screen: AnyView {
         get { type.makeScreen(selected).lazy.toAnyView() }
     }

@@ -8,8 +8,8 @@
 import Foundation
 
 enum Mode: String, CaseIterable {
-    case play = "Play"
     case settings = "Settings"
+    case play = "Play"
     case leaders = "Leaderboard"
 }
 

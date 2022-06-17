@@ -11,14 +11,13 @@ import SpriteKit
 struct PlayScreen: View {
     var scene: SKScene {
         let scene = GameScene()
-        scene.size = CGSize(width: 300, height: 400)
         scene.scaleMode = .fill
+        scene.backgroundColor = .secondarySystemBackground
         return scene
     }
     
     var body: some View {
         SpriteView(scene: scene)
             .ignoresSafeArea()
-            .frame(width: 300, height: 400)
     }
 }

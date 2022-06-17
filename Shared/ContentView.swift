@@ -10,7 +10,7 @@ import SpriteKit
 import Navigation
 
 struct ContentView: View {
-    @State var selected: Mode = Mode.settings
+    @State var selected: Mode = Mode.play
     @ObservedObject var route = NavigationViewModel()
     
     var body: some View {
@@ -18,6 +18,7 @@ struct ContentView: View {
             Navigation(transition: Transition.custom(.slide)) {
                 ContainerScreen(selected: $selected)
             }
+            Spacer()
             Picker("Show: ", selection: $selected, content: {
                 ForEach(Modes.shared.modes.indices, id:\.self) { i in
                     Text(Modes.shared.modes[i].rawValue)
@@ -31,8 +32,12 @@ struct ContentView: View {
                     route.push(screeView: new)
                 }
             })
+            .pickerStyle(.segmented)
+            .padding()
         }
-        .pickerStyle(.segmented)
+        .background(LinearGradient(gradient: Gradient(colors: [Color(red: 176 / 255, green: 140 / 255, blue: 232 / 255), Color(red: 162 / 255, green: 166 / 255, blue: 206 / 255), .white]),
+                           startPoint: .top,
+                           endPoint: .bottom))
         .environmentObject(NavigationViewModel())
     }
 }

@@ -9,6 +9,23 @@ import SwiftUI
 
 struct LeaderboardScreen: View {
     var body: some View {
-        Text("Hello, Leader Board!")
+        VStack {
+            Text("Leaderboard!")
+            HStack {
+                List {
+                    Section("Name") {
+                        ForEach(Players.shared.players) { i in
+                            HStack {
+                                Text("\(i.name)")
+                                Spacer()
+                                Text("\(i.score)")
+                            }
+                        }
+                    }
+                    .listRowBackground(Color.clear)
+                }
+                .listStyle(.plain)
+            }
+        }
     }
 }
