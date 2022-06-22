@@ -12,7 +12,7 @@ struct PlayScreen: View {
     var scene: SKScene {
         let scene = GameScene()
         scene.scaleMode = .fill
-        scene.backgroundColor = .secondarySystemBackground
+        scene.backgroundColor = CustomColor(hex: 0x856efa, alpha: 1)
         return scene
     }
     

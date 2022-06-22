@@ -12,6 +12,7 @@ struct GameMacOSApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .background(CustomColor.gradient)
         }
     }
 }

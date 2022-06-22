@@ -9,24 +9,25 @@ import SwiftUI
 
 struct Settings: View {
     @State private var show = true
-    @State private var speed = 50.0
+    @State private var speed: Float = 50
     @State private var isEditing = false
     
     var body: some View {
         VStack {
-            Text("Settings")
+            Text("Settings").bold()
             Spacer(minLength: 40)
             List {
                 Toggle(isOn: $show, label: {
-                    Text("Enable Notifications")
+                    Text("Enable Notifications").bold()
                 })
                 .listRowBackground(Color.clear)
                 HStack {
-                    Text("Volume")
+                    Text("Volume").bold()
+                    Divider()
                     VStack {
-                        Slider(value: $speed, in: 0...100, onEditingChanged: { editing in
+                        CustomSlider.produce(value: $speed) { editing in
                             isEditing = editing
-                        })
+                        }
                         Text("\(Int(speed))")
                             .foregroundColor(isEditing ? .red : .blue)
                     }

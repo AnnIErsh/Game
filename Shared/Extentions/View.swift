@@ -29,5 +29,15 @@ extension View {
     func toAnyView() -> AnyView {
         AnyView(self)
     }
+
+    @ViewBuilder
+    func showMenu(isPresented: Binding<Bool>, selected: Binding<Mode>) -> some View {
+        let screen = MenuScreen(selected: selected).lazy.toAnyView
+        #if os(iOS) || os(tvOS)
+        fullScreenCover(isPresented: isPresented, content: screen)
+        #elseif os(macOS)
+        popover(isPresented: $isPresented, content: screen)
+        #endif
+    }
 }
 

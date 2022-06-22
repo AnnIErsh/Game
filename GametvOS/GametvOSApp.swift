@@ -15,18 +15,3 @@ struct GametvOSApp: App {
         }
     }
 }
-
-typealias FocusChangeCallback = (Bool) -> Void
-
-struct FocusTracker: View {
-    @Environment(\.isFocused) var isFocused
-    let action: FocusChangeCallback
-
-    var body: some View {
-        Rectangle()
-            .fill(Color.clear)
-            .onChange(of: isFocused) { value in
-                action(value)
-            }
-    }
-}
