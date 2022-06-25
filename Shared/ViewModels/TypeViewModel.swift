@@ -10,7 +10,7 @@ import SwiftUI
 
 final class TypeViewModel: ObservableObject {
     @Published var head: Mode = .play
-
+    
     var mode: Mode {
         get { head }
         set { head = newValue }

@@ -31,13 +31,11 @@ extension View {
     }
 
     @ViewBuilder
-    func showMenu(isPresented: Binding<Bool>, selected: Binding<Mode>) -> some View {
-        let screen = MenuScreen(selected: selected).lazy.toAnyView
+    func showMenu(isPresented: Binding<Bool>, selected: Binding<Mode>?, screen: @escaping () -> AnyView) -> some View {
         #if os(iOS) || os(tvOS)
         fullScreenCover(isPresented: isPresented, content: screen)
         #elseif os(macOS)
-        popover(isPresented: $isPresented, content: screen)
+        popover(isPresented: isPresented, content: screen)
         #endif
     }
 }
-
