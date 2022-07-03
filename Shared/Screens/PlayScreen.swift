@@ -14,14 +14,7 @@ struct PlayScreen: View {
     var change: ((Bool) -> Void)?
     
     var gameScene: GameScene = {
-        #if os(iOS) || os(tvOS)
-        let size = CGSize(width: UIScreen.main.bounds.size.width,
-                          height: UIScreen.main.bounds.size.height)
-        #elseif os(macOS)
-        let size = CGSize(width: NSScreen.main?.visibleFrame.size.width ?? 800,
-                          height: NSScreen.main?.visibleFrame.size.height ?? 600)
-        #endif
-        let scene = GameScene(size: size)
+        let scene = GameScene(size: ScreenSize.size)
         scene.backgroundColor = CustomColor(hex: 0xc7caf9, alpha: 1)
         scene.scaleMode = .aspectFit
         return scene
@@ -49,7 +42,7 @@ struct PlayScreen: View {
                 }
             }
     }
-
+    
     var body: some View {
         sprite
             #if os(tvOS)

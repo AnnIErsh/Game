@@ -22,6 +22,12 @@
 		E75DA0A1285A90C3005BFB61 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E75DA0A0285A90C3005BFB61 /* Preview Assets.xcassets */; };
 		E75DA0A5285A90D8005BFB61 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75DA066285A8ACF005BFB61 /* GameScene.swift */; };
 		E75DA0A6285A90DB005BFB61 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75DA05A285A88F3005BFB61 /* ContentView.swift */; };
+		E78EC3DD28723E5300D5F2A7 /* ext+GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78EC3DC28723E5300D5F2A7 /* ext+GameScene.swift */; };
+		E78EC3E32872478E00D5F2A7 /* ScreenSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78EC3E22872478E00D5F2A7 /* ScreenSize.swift */; };
+		E78EC3E42872478E00D5F2A7 /* ScreenSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78EC3E22872478E00D5F2A7 /* ScreenSize.swift */; };
+		E78EC3E52872478E00D5F2A7 /* ScreenSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78EC3E22872478E00D5F2A7 /* ScreenSize.swift */; };
+		E78EC3E728724D4B00D5F2A7 /* ext+GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78EC3E02872417100D5F2A7 /* ext+GameScene.swift */; };
+		E78EC3E828724D6700D5F2A7 /* ext+GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78EC3DC28723E5300D5F2A7 /* ext+GameScene.swift */; };
 		E7917F70285CCAD800E456A6 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7917F6F285CCAD800E456A6 /* Color.swift */; };
 		E7917F71285CCAD800E456A6 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7917F6F285CCAD800E456A6 /* Color.swift */; };
 		E7917F72285CCAD800E456A6 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7917F6F285CCAD800E456A6 /* Color.swift */; };
@@ -84,6 +90,9 @@
 		E75DA09D285A90C3005BFB61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E75DA0A0285A90C3005BFB61 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E78D991928621E9E00037950 /* GameiOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GameiOS.entitlements; sourceTree = "<group>"; };
+		E78EC3DC28723E5300D5F2A7 /* ext+GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ext+GameScene.swift"; sourceTree = "<group>"; };
+		E78EC3E02872417100D5F2A7 /* ext+GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ext+GameScene.swift"; sourceTree = "<group>"; };
+		E78EC3E22872478E00D5F2A7 /* ScreenSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSize.swift; sourceTree = "<group>"; };
 		E7917F6F285CCAD800E456A6 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		E79A30B9285E25640075491A /* MenuScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScreen.swift; sourceTree = "<group>"; };
 		E79F03452867AA41001EE36C /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
@@ -155,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				E75DA06E285A8CBA005BFB61 /* GameMacOSApp.swift */,
+				E78EC3E02872417100D5F2A7 /* ext+GameScene.swift */,
 				E75DA072285A8CBC005BFB61 /* Assets.xcassets */,
 				E75DA077285A8CBC005BFB61 /* GameMacOS.entitlements */,
 				E75DA074285A8CBC005BFB61 /* Preview Content */,
@@ -223,6 +233,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		E78EC3E628724D2000D5F2A7 /* iOSandTV */ = {
+			isa = PBXGroup;
+			children = (
+				E78EC3DC28723E5300D5F2A7 /* ext+GameScene.swift */,
+			);
+			path = iOSandTV;
+			sourceTree = "<group>";
+		};
 		E7A25D062863ABC3005C221F /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,6 +280,7 @@
 		E7A27487285AAC6D001E4A8F /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
+				E78EC3E628724D2000D5F2A7 /* iOSandTV */,
 				E7A27488285AAC7A001E4A8F /* View.swift */,
 				E7917F6F285CCAD800E456A6 /* Color.swift */,
 				E79F03452867AA41001EE36C /* Image.swift */,
@@ -281,6 +300,7 @@
 			isa = PBXGroup;
 			children = (
 				E7A8A68E285CBEBF00F62DFE /* Player.swift */,
+				E78EC3E22872478E00D5F2A7 /* ScreenSize.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -429,8 +449,10 @@
 				E7A27489285AAC7A001E4A8F /* View.swift in Sources */,
 				E7A27483285AAAEE001E4A8F /* Modes.swift in Sources */,
 				E75DA07D285A8F1C005BFB61 /* GameScene.swift in Sources */,
+				E78EC3E32872478E00D5F2A7 /* ScreenSize.swift in Sources */,
 				E7A27476285A9EBC001E4A8F /* PlayScreen.swift in Sources */,
 				E7917F70285CCAD800E456A6 /* Color.swift in Sources */,
+				E78EC3E728724D4B00D5F2A7 /* ext+GameScene.swift in Sources */,
 				E75DA07C285A8EF7005BFB61 /* ContentView.swift in Sources */,
 				E79A30BA285E25640075491A /* MenuScreen.swift in Sources */,
 				E79F03462867AA41001EE36C /* Image.swift in Sources */,
@@ -447,11 +469,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E78EC3DD28723E5300D5F2A7 /* ext+GameScene.swift in Sources */,
 				E7A8A690285CBEBF00F62DFE /* Player.swift in Sources */,
 				E7A25D0A2863AC44005C221F /* CustomSlider.swift in Sources */,
 				E7A2748A285AAC7A001E4A8F /* View.swift in Sources */,
 				E7A27484285AAAEE001E4A8F /* Modes.swift in Sources */,
 				E75DA092285A9008005BFB61 /* GameScene.swift in Sources */,
+				E78EC3E42872478E00D5F2A7 /* ScreenSize.swift in Sources */,
 				E7A27477285A9EBC001E4A8F /* PlayScreen.swift in Sources */,
 				E7917F71285CCAD800E456A6 /* Color.swift in Sources */,
 				E75DA091285A8FB5005BFB61 /* ContentView.swift in Sources */,
@@ -475,6 +499,7 @@
 				E7A2748B285AAC7A001E4A8F /* View.swift in Sources */,
 				E7A27485285AAAEE001E4A8F /* Modes.swift in Sources */,
 				E75DA0A5285A90D8005BFB61 /* GameScene.swift in Sources */,
+				E78EC3E52872478E00D5F2A7 /* ScreenSize.swift in Sources */,
 				E7A27478285A9EBC001E4A8F /* PlayScreen.swift in Sources */,
 				E7917F72285CCAD800E456A6 /* Color.swift in Sources */,
 				E75DA09A285A90C1005BFB61 /* GametvOSApp.swift in Sources */,
@@ -482,6 +507,7 @@
 				E79F03482867AA41001EE36C /* Image.swift in Sources */,
 				E7F54F7328655802004AB7BE /* GameOverScreen.swift in Sources */,
 				E7A27495285ABF89001E4A8F /* ContainerScreen.swift in Sources */,
+				E78EC3E828724D6700D5F2A7 /* ext+GameScene.swift in Sources */,
 				E7A27490285AB68D001E4A8F /* TypeViewModel.swift in Sources */,
 				E75DA0A6285A90DB005BFB61 /* ContentView.swift in Sources */,
 				E7A2747D285A9ED4001E4A8F /* Settings.swift in Sources */,

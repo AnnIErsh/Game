@@ -10,7 +10,6 @@ import SpriteKit
 import SwiftUI
 
 class GameScene: SKScene {
-    
     var change: ((Bool) -> Void)?
     
     var reset: Bool? {
@@ -70,35 +69,6 @@ class GameScene: SKScene {
             self.removeAllActions()
         }
     }
-    
-    #if os(iOS) || os(tvOS)
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        moving()
-        handleActions(touches, with: event)
-    }
-    
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        handleActions(touches, with: event)
-    }
-    
-    func handleActions(_ touches: Set<UITouch>, with event: UIEvent?) {
-        guard let touch = touches.first else { return }
-        let location = touch.location(in: self)
-        handleLocation(location: location)
-    }
-    
-    #elseif os(macOS)
-    override func mouseDown(with event: NSEvent) {
-        moving()
-        let location = event.location(in: self)
-        handleLocation(location: location)
-    }
-
-    override func mouseDragged(with event: NSEvent) {
-        let location = event.location(in: self)
-        handleLocation(location: location)
-    }
-    #endif
     
     func handleLocation(location: CGPoint) {
         if stop.contains(location) {
